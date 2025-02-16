@@ -1,3 +1,5 @@
+import Link from "next/link"
+
 const Home = () => {
   return (
     <>
@@ -11,8 +13,11 @@ const Home = () => {
 
       </div>
 
-      <div className="text-center -mt-20">
-        <button title="Press start" type="button">Press Start</button>
+      <div className="text-center -mt-20 " >
+        <Link href={"/about"}>
+          <button title="Press start" type="button" >Press Start</button>
+        </Link>
+
       </div>
     </>
   )
