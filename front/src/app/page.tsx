@@ -1,3 +1,5 @@
+"use client"
+import Button from "@/components/StartButton";
 import Link from "next/link"
 
 const Home = () => {
@@ -13,13 +15,13 @@ const Home = () => {
 
       </div>
 
-      <div className="text-center -mt-20 " >
+      <div className="text-center -mt-20 shadow-lg">
         <Link href={"/about"}>
-          <button title="Press start" type="button" >Press Start</button>
+          <Button/>
         </Link>
 
       </div>
     </>
   )
 }
-export default Home
+export default Home;
