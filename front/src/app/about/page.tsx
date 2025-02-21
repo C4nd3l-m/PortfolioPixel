@@ -1,9 +1,10 @@
 import Image from "next/image";
+import techLogos from "@/helpers/logos";
 
 const About = () => {
     return (
         <>
-        <div className="flex center mt-40">
+        <div className="flex center mt-40 p-6">
             <p>
                 Desarrolladora web Full-Stack con especialización en frontend,
                 apasionada por la creación de experiencias web funcionales y atractivas.
@@ -13,72 +14,24 @@ const About = () => {
             </p>
         </div>
 
-            <div className="flex gap-16 mt-14">
-                <Image
-                    src="/logos/css.gif"
-                    alt="CSS"
-                    width={90}
-                    height={90}
-                    className="hover:scale-110 transition-transform"
-                />
-
-                <Image
-                    src="/logos/git.gif"
-                    alt="Git"
-                    width={90}
-                    height={90}
-                    className="hover:scale-110 transition-transform"
-                />
-
-                <Image
-                    src="/logos/html.gif"
-                    alt="HTML"
-                    width={90}
-                    height={90}
-                    className="hover:scale-110 transition-transform"
-                />
-
-                <Image
-                    src="/logos/mongodb.gif"
-                    alt="MongoDB"
-                    width={90}
-                    height={90}
-                    className="hover:scale-110 transition-transform"
-                />
-
-                <Image
-                    src="/logos/node.gif"
-                    alt="Node"
-                    width={90}
-                    height={90}
-                    className="hover:scale-110 transition-transform"
-                />
-
-                <Image
-                    src="/logos/react.gif"
-                    alt="React"
-                    width={90}
-                    height={90}
-                    className="hover:scale-110 transition-transform"
-                />
-
-                <Image
-                    src="/logos/sql.gif"
-                    alt="SQL"
-                    width={90}
-                    height={90}
-                    className="hover:scale-110 transition-transform"
-                />
-
-                <Image
-                    src="/logos/tailwind.gif"
-                    alt="Tailwind"
-                    width={90}
-                    height={90}
-                    className="hover:scale-110 transition-transform"
-                />
-            </div>
+        <div className="grid grid-cols-10 gap-10 mt-14 p-6">
+            {techLogos.map((logo, index) => (
+                <div
+                    key={index}
+                    className="flex justify-center items-center bg-white rounded-full p-3 shadow-lg hover:scale-110 transition-transform"
+                >
+                    <Image
+                        src={logo.src}
+                        alt={logo.alt}
+                        width={60}
+                        height={60}
+                        className="object-contain"
+                    />
+                </div>
+            ))}
+        </div>
         </>
-    )
-}
+    );
+};
+
 export default About;
