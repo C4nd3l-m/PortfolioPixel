@@ -4,7 +4,7 @@ import styled from 'styled-components';
 const Button = () => {
   return (
     <StyledWrapper>
-      <button className="btn-1">Press start!</button>
+      <button className="btn-1">Press start</button>
     </StyledWrapper>
   );
 }

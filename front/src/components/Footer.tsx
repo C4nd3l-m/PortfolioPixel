@@ -9,7 +9,7 @@ const Footer = () => {
     if (pathName === "/") return null;
 
     return (
-        <footer className="bg-black text-white py-4 flex flex-col items-center gap-2">
+        <footer className="bg-black/50 backdrop-blur-md text-white py-4 flex flex-col items-center gap-2">
             <p className="text-xs">&copy; 2025 Candela Villaverde. All rights reserved.</p>
 
             <div className="flex gap-4">

@@ -8,7 +8,7 @@ const NavBar = () => {
 
     if (pathName === "/") return null;
     return (
-        <div className="fixed top-0 w-full bg-black text-white p-4 flex gap-6 justify-center items-center">
+        <div className="fixed top-0 w-full bg-black/50 backdrop-blur-md text-white p-4 flex gap-6 justify-center items-center">
 
             <Link href={"/"} className="flex flex-col items-center">
                 <Image
