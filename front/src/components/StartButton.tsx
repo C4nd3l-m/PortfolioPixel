@@ -1,13 +1,17 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
-const Button = () => {
+interface ButtonProps {
+  onClick?: () => void;
+}
+
+const Button: React.FC<ButtonProps> = ({ onClick }) => {
   return (
     <StyledWrapper>
-      <button className="btn-1">Press start</button>
+      <button className="btn-1" onClick={onClick}>Press Start</button>
     </StyledWrapper>
   );
-}
+};
 
 const StyledWrapper = styled.div`
   .btn-1 {
@@ -56,6 +60,7 @@ const StyledWrapper = styled.div`
 
   .btn-1:hover::after {
     width: 100%;
-  }`;
+  }
+`;
 
 export default Button;
