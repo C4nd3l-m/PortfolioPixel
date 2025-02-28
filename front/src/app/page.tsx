@@ -10,7 +10,7 @@ const Home = () => {
 
   
   const playSound = () => {
-    const audio = new Audio("/SamusSpinJump.wav");
+    const audio = new Audio("/throw.wav");
     audio.play();
   };
 

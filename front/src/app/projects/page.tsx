@@ -1,20 +1,24 @@
 import Image from "next/image";
 import Link from "next/link";
+import arrProjects from "@/helpers/projects";
 
 const Projects = () => {
-    return(
+    return (
         <>
-        <div>
-            <Link href={"https://e-commerce-nextbyte.vercel.app/"}>
-                
-                <Image
-                    src={"/nextByte.jpeg"}
-                    width={20}
-                    height={20}
-                    alt="nextByte"
-                />
-            </Link>
-        </div>
+            <div>
+                {arrProjects.map((project, index) => (
+                    <div key={index}>
+                        <Link href={project.href}>
+                            <Image className="mt-40 ml-20 mb-10 mr-5"
+                                src={project.src}
+                                width={200}
+                                height={200}
+                                alt={project.alt}
+                            />
+                        </Link>
+                    </div>
+                ))}
+            </div>
         </>
     )
 }
