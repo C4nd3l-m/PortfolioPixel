@@ -8,11 +8,11 @@ const About = () => {
             <p>
                 Desarrolladora web Full-Stack con especialización en frontend,
                 apasionada por la creación de experiencias web funcionales y atractivas.
-                Tengo experiencia en React, Next.js, Node.js, Express, TypeScript, SQL y MongoDB, así como en el uso de herramientas como Git, GitHub y metodologías ágiles (Scrum).
 
                 Hablo español nativo y tengo un nivel de inglés intermedio (B1).
             </p>
         </div>
+            <h1>Mis tecnologías y herramientas</h1>
 
         <div className="grid grid-cols-10 gap-10 mt-14 p-6">
             {techLogos.map((logo, index) => (
