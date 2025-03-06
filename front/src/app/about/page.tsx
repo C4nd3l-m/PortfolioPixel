@@ -19,9 +19,7 @@ const About = () => {
                 </p>
             </div>
 
-
-
-            <div className="grid grid-cols-10 gap-10 mt-14 p-6">
+            <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-10 gap-10 mt-14 p-6">
                 {techLogos.map((logo, index) => (
                     <div
                         key={index}
