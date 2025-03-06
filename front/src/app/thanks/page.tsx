@@ -24,7 +24,7 @@ const Thanks = () => {
 
       <div className="mt-10">
   <img
-    src="/path/to/animated.gif"
+    src="/pokemon.gif"
     alt="Exciting animation"
     className="mx-auto w-1/3 h-auto"
   />
