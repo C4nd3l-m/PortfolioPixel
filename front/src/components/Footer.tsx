@@ -13,7 +13,7 @@ const Footer = () => {
             <p className="text-xs">&copy; 2025 Candela Villaverde. All rights reserved.</p>
 
             <div className="flex gap-4">
-                <Link href="https://www.linkedin.com/in/candela-villaverde%F0%9F%91%BE-0a9027318/" target="_blank">
+                <Link href="https://www.linkedin.com/in/candela-villaverde/" target="_blank">
                     <Image
                         src="/icons/linkedin.gif"
                         alt="LinkedIn Icon"
