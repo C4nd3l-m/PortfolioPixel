@@ -24,14 +24,15 @@ const About = () => {
                     <div
                         key={index}
                         className="flex justify-center items-center bg-white rounded-full p-3 shadow-lg hover:scale-110 transition-transform"
-                    >
+                        >
                         <Image
                             src={logo.src}
                             alt={logo.alt}
                             width={60}
                             height={60}
                             className="object-contain"
-                        />
+                            />
+                        
                     </div>
                 ))}
             </div>

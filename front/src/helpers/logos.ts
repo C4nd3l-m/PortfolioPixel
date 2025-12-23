@@ -1,30 +1,36 @@
 const techLogos = [
-    { src: "/svgs/css.svg", alt: "CSS" },
-    { src: "/svgs/git.svg", alt: "Git" },
-    { src: "/svgs/html5.svg", alt: "HTML" },
-    { src: "/svgs/mongodb.svg", alt: "MongoDB" },
-    { src: "/svgs/nodejs.svg", alt: "Node" }, 
-    { src: "/svgs/React.svg", alt: "React" },
-    { src: "/svgs/postgresql.svg", alt: "PostgreSQL" },
-    { src: "/svgs/Tailwind.svg", alt: "Tailwind" },
-    { src: "/svgs/Bash.svg", alt: "Bash" },
-    { src: "/svgs/bootstrap.svg", alt: "Bootstrap" },
-    { src: "/svgs/dotenv.svg", alt: "Dotenv" },
-    { src: "/svgs/Express.svg", alt: "Express" },
-    { src: "/svgs/Github.svg", alt: "Github" },
-    { src: "/svgs/javascript.svg", alt: "JavaScript" },
-    { src: "/svgs/jest.svg", alt: "Jest" },
-    { src: "/svgs/jQuery.svg", alt: "jQuery" },
-    { src: "/svgs/json.svg", alt: "JSON" },
-    { src: "/svgs/jwt.svg", alt: "JWT" },
-    { src: "/svgs/Next.svg", alt: "NextJS" },
-    { src: "/svgs/npm.svg", alt: "npm" },
-    { src: "/svgs/sequelize.svg", alt: "Sequelize" },
-    { src: "/svgs/stripe.svg", alt: "Stripe" },
-    { src: "/svgs/svg.svg", alt: "svg" },
-    { src: "/svgs/typescript.svg", alt: "TypeScript" },
-    { src: "/svgs/Vercel.svg", alt: "Vercel" },
-    { src: "/svgs/vitejs.svg", alt: "Vite" },
+    // Frontend Core
+    { src: "/svgs/React.svg", alt: "React", name: "React" },
+    { src: "/svgs/Next.svg", alt: "Next.js", name: "Next.js", invert: true },
+    { src: "/svgs/astro.svg", alt: "Astro", name: "Astro", invert: true },
+    { src: "/svgs/typescript.svg", alt: "TypeScript", name: "TypeScript" },
+
+    // Styling
+    { src: "/svgs/Tailwind.svg", alt: "Tailwind", name: "Tailwind CSS", invert: true },
+    { src: "/svgs/css.svg", alt: "CSS", name: "CSS3" },
+    { src: "/svgs/html5.svg", alt: "HTML", name: "HTML5" },
+
+    // Backend & Automation
+    { src: "/svgs/nodejs.svg", alt: "Node.js", name: "Node.js" },
+    { src: "/svgs/Express.svg", alt: "Express", name: "Express", invert: true },
+    { src: "/svgs/n8n.svg", alt: "n8n", name: "n8n", invert: true },
+    { src: "/svgs/php.svg", alt: "PHP", name: "PHP", invert: true },
+    { src: "/svgs/laravel.svg", alt: "Laravel", name: "Laravel", invert: true },
+
+    // Databases & Cloud
+    { src: "/svgs/postgresql.svg", alt: "PostgreSQL", name: "PostgreSQL" },
+    { src: "/svgs/supabase.svg", alt: "Supabase", name: "Supabase", invert: true },
+    { src: "/svgs/mongodb.svg", alt: "MongoDB", name: "MongoDB" },
+
+    // Tools & DevOps
+    { src: "/svgs/coolify.svg", alt: "Coolify", name: "Coolify", invert: true },
+    { src: "/svgs/docker.svg", alt: "Docker", name: "Docker", invert: true },
+    { src: "/svgs/git.svg", alt: "Git", name: "Git" },
+    { src: "/svgs/Vercel.svg", alt: "Vercel", name: "Vercel", invert: true },
+
+    // Apps & CMS
+    { src: "/svgs/waha.svg", alt: "WAHA", name: "WAHA (WhatsApp API)", invert: true },
+    { src: "/svgs/wordpress.svg", alt: "WordPress", name: "WordPress", invert: true },
 ];
 
 export default techLogos;

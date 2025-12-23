@@ -1,22 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Bungee&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+.custom-scrollbar::-webkit-scrollbar {
+    width: 3px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: rgba(144, 103, 198, 0.2);
+    border-radius: 10px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 113, 206, 0.4);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+:root {
+  --background: #0D0D0D;
+  --foreground: #f8f9fa;
+  --kuromi-black: #0D0D0D;
+  --kuromi-purple: #240046;
+  --kuromi-neon-purple: #9d4edd;
+  --kuromi-pink: #ff006e;
+  --kuromi-white: #f8f9fa;
+}
+
+@layer base {
+  body {
+    @apply bg-kuromi-black text-kuromi-white;
+    font-family: var(--font-geist-sans), 'Orbitron', sans-serif;
+    cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath fill='%23ff006e' d='M12 2L2 22h20L12 2z'/%3E%3C/svg%3E"), auto;
+  }
+
+  * {
+    @apply selection:bg-kuromi-pink selection:text-kuromi-black;
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family:  Arial, Helvetica, sans-serif;
+@layer components {
+  /* Neon glow text utility */
+  .text-neon {
+    text-shadow: 0 0 10px currentColor, 0 0 20px currentColor, 0 0 30px currentColor;
+  }
 
+  .text-neon-pink {
+    color: var(--kuromi-pink);
+    text-shadow: 0 0 10px var(--kuromi-pink), 0 0 20px var(--kuromi-pink), 0 0 30px var(--kuromi-pink);
+  }
+
+  .text-neon-purple {
+    color: var(--kuromi-neon-purple);
+    text-shadow: 0 0 10px var(--kuromi-neon-purple), 0 0 20px var(--kuromi-neon-purple), 0 0 30px var(--kuromi-neon-purple);
+  }
+
+  /* Border glow utility */
+  .border-glow-pink {
+    border: 2px solid var(--kuromi-pink);
+    box-shadow: 0 0 10px var(--kuromi-pink), 0 0 20px var(--kuromi-pink), inset 0 0 10px rgba(255, 0, 110, 0.2);
+  }
+
+  .border-glow-purple {
+    border: 2px solid var(--kuromi-neon-purple);
+    box-shadow: 0 0 10px var(--kuromi-neon-purple), 0 0 20px var(--kuromi-neon-purple), inset 0 0 10px rgba(157, 78, 221, 0.2);
+  }
+
+  /* Scanline effect */
+  .scanlines {
+    position: relative;
+  }
+
+  .scanlines::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+      rgba(18, 16, 16, 0) 50%,
+      rgba(0, 0, 0, 0.25) 50%
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255, 0, 0, 0.06),
+      rgba(0, 255, 0, 0.02),
+      rgba(0, 0, 255, 0.06)
+    );
+    background-size: 100% 2px, 3px 100%;
+    pointer-events: none;
+    z-index: 50;
+    opacity: 0.15;
+  }
+
+  /* Bento card base style */
+  .bento-card {
+    background: linear-gradient(to bottom right, rgba(36, 0, 70, 0.4), rgba(13, 13, 13, 0.6));
+    backdrop-filter: blur(4px);
+    border-radius: 1.5rem;
+    border: 2px solid rgba(157, 78, 221, 0.3);
+    padding: 1.5rem;
+    transition: all 300ms;
+  }
+
+  .bento-card:hover {
+    border-color: rgba(255, 0, 110, 0.6);
+    transform: scale(1.02);
+    box-shadow: 0 0 20px rgba(255, 0, 110, 0.3), 0 0 40px rgba(157, 78, 221, 0.2);
+  }
+}
+
+@layer utilities {
+  /* Custom cursor for interactive elements */
+  .cursor-skull {
+    cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24'%3E%3Cpath fill='%23ff006e' d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z'/%3E%3C/svg%3E"), pointer;
+  }
+
+  /* Gradient backgrounds */
+  .bg-cyber-gradient {
+    background: linear-gradient(135deg, #240046 0%, #0D0D0D 50%, #240046 100%);
+  }
+
+  .bg-neon-gradient {
+    background: linear-gradient(135deg, #9d4edd 0%, #ff006e 100%);
+  }
 }

@@ -9,14 +9,18 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "clsx": "^2.1.1",
+    "framer-motion": "^12.23.26",
     "i18next": "^24.2.2",
+    "lucide-react": "^0.562.0",
     "motion": "^12.4.7",
     "next": "15.1.6",
     "next-i18next": "^15.4.2",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-i18next": "^15.4.1",
-    "styled-components": "^6.1.15"
+    "styled-components": "^6.1.15",
+    "tailwind-merge": "^3.4.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",

@@ -1,24 +1,20 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
-import NavBar from "@/components/NavBar";
-import Footer from "@/components/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const jetbrainsMono = JetBrains_Mono({
+  variable: "--font-jetbrains-mono",
   subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
-  title: "Portfolio Pixel",
-  description: "Personal portfolio showcasing web development projects and skills.",
-  keywords: "portfolio, web development, frontend, React, Next.js, TypeScript",
-  authors: [],
+  title: "Candela Villaverde | Full Stack Developer",
+  description: "Cyber-Goth Pastel Portfolio - Full Stack Dev by day, Chaos by night",
 };
 
 export default function RootLayout({
@@ -27,26 +23,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <head>
-        <link rel="icon" href="/alien.ico" />
-      </head>
+    <html lang="es">
       <body
-        className={`relative ${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${jetbrainsMono.variable} antialiased scanlines`}
       >
-        <video
-          autoPlay
-          loop
-          muted
-          className="absolute top-0 left-0 w-full h-full object-cover -z-10"
-        >
-          <source src="/BackgroundAnimated.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-
-        <NavBar />
-        <main className="min-h-screen flex flex-col">{children}</main>
-        <Footer />
+        {children}
       </body>
     </html>
   );
