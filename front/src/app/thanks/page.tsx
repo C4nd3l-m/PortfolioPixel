@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import Button from "@/components/GoAboutButton";
 
@@ -23,10 +24,13 @@ const Thanks = () => {
             </div>
 
             <div className="mt-10">
-                <img
+                <Image
                     src="/pokemon.gif"
                     alt="Exciting animation"
+                    width={400}
+                    height={300}
                     className="mx-auto w-1/3 h-auto"
+                    unoptimized={true}
                 />
             </div>
 
