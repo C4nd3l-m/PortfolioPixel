@@ -64,7 +64,7 @@ export default function VillainBlock() {
                     className="space-y-4"
                 >
                     <p className="text-metal-white/90 text-sm md:text-base leading-relaxed font-mono tracking-wide uppercase">
-                        I architect and deploy digital ecosystems that don't sleep.
+                        I architect and deploy digital ecosystems that don&apos;t sleep.
                     </p>
 
                     <p className="text-metal-white/70 text-sm leading-relaxed font-mono">

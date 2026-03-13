@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import Image from "next/image";
 import Link from "next/link";
 import arrProjects from "@/helpers/projects";
@@ -60,7 +61,7 @@ const Projects = () => {
                                     <div className="mt-6 w-full text-xs font-mono text-metal-white/60 space-y-3 border-t border-metal-white/20 pt-4">
                                         <p><strong className="text-metal-white/80">Endpoints/Webhooks:</strong> Integración en tiempo real.</p>
                                         <p><strong className="text-metal-white/80">Logs & Monitoring:</strong> Trazabilidad completa y alertas vía Slack.</p>
-                                        <p className="text-metal-red italic mt-6 text-center">"Si querés ver una demo en 10 minutos, coordinamos una llamada y te muestro el workflow en vivo."</p>
+                                        <p className="text-metal-red italic mt-6 text-center">&quot;Si querés ver una demo en 10 minutos, coordinamos una llamada y te muestro el workflow en vivo.&quot;</p>
                                     </div>
                                 </div>
                             </div>
