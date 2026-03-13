@@ -23,22 +23,44 @@ export default function Home() {
                         transition={{ delay: 0.2, type: "spring", stiffness: 100 }}
                         className="mb-12 md:mb-16"
                     >
-                        <h1 className="text-4xl md:text-5xl lg:text-6xl font-orbitron font-bold text-kuromi-white mb-3">
-                            Candela <span className="text-kuromi-pink">Villaverde</span>
+                        <h1 className="text-4xl md:text-5xl lg:text-6xl font-orbitron font-black text-metal-white mb-3 tracking-widest uppercase">
+                            CANDELA <span className="text-metal-red">VILLAVERDE</span>
                         </h1>
-                        <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-3">
-                            <p className="text-lg md:text-xl text-kuromi-neon-purple font-mono">
-                                Frontend Developer
+                        
+                        {/* Top-right "Contrátame" button (absolute positioning for md+ screens) */}
+                        <div className="absolute top-8 right-4 md:right-8 lg:right-12 hidden md:block z-50">
+                            <a href="mailto:c4nd3l.m@gmail.com?subject=Oferta%20%7C%20Automation%20Developer" className="px-5 py-2.5 bg-metal-red text-metal-black font-mono font-bold text-sm rounded-lg hover:bg-metal-white transition-colors shadow-[0_0_15px_rgba(255,113,206,0.4)]">
+                                Contrátame
+                            </a>
+                        </div>
+
+                        <div className="flex flex-col gap-2 mt-4">
+                            <p className="text-xl md:text-2xl text-metal-white font-mono font-bold tracking-wide uppercase">
+                                Fullstack Developer · Automation & AI Workflows
                             </p>
-                            <span className="hidden md:inline text-kuromi-neon-purple/50">|</span>
-                            <p className="text-sm md:text-base text-kuromi-white/70 font-mono">
-                                React · Next.js · TypeScript · Astro
+                            <p className="text-sm md:text-base text-metal-white/70 font-mono max-w-2xl leading-relaxed mt-4">
+                                Construyo plataformas web e integraciones automatizadas que escalan operaciones.<br/>
+                                Reemplazo el caos manual con <span className="text-metal-red font-semibold">lógica estructurada</span> utilizando <span className="text-metal-white font-semibold">React/Next.js</span> y flujos <span className="text-metal-white font-semibold">n8n</span> desde el vacío.
                             </p>
                         </div>
-                        <div className="flex items-center gap-3 mt-2 text-xs md:text-sm text-kuromi-white/50 font-mono">
+
+                        {/* CTAs */}
+                        <div className="flex flex-wrap items-center gap-4 mt-8 mb-4">
+                            <a href="/projects" className="px-6 py-3 bg-metal-white hover:bg-metal-red text-metal-black hover:text-metal-white font-mono font-bold rounded shadow-[0_0_15px_rgba(136,8,8,0.2)] hover:shadow-[0_0_20px_rgba(136,8,8,0.5)] transition-all uppercase tracking-wider text-sm">
+                                Ver Case Studies
+                            </a>
+                            <a href="/cv.pdf" target="_blank" rel="noopener noreferrer" className="px-6 py-3 bg-transparent hover:bg-metal-red/10 text-metal-white font-mono rounded transition-colors border border-metal-white/20 hover:border-metal-red uppercase tracking-wider text-sm">
+                                Descargar CV
+                            </a>
+                            {/* Mobile Contrátame CTA */}
+                            <a href="mailto:c4nd3l.m@gmail.com?subject=Oferta%20%7C%20Automation%20Developer" className="md:hidden px-6 py-3 bg-metal-red text-metal-white font-mono font-bold rounded uppercase tracking-wider transition-colors text-sm">
+                                Contrátame
+                            </a>
+                        </div>
+                        <div className="flex items-center gap-3 mt-6 text-xs md:text-sm text-metal-white/50 font-mono">
                             <span>🇦🇷 Argentina</span>
                             <span>•</span>
-                            <a href="mailto:c4nd3l.m@gmail.com" className="hover:text-kuromi-pink transition-colors">
+                            <a href="mailto:c4nd3l.m@gmail.com?subject=Contacto%20%7C%20Portfolio" className="hover:text-metal-red transition-colors">
                                 c4nd3l.m@gmail.com
                             </a>
                             <span>•</span>
@@ -46,12 +68,43 @@ export default function Home() {
                                 href="https://www.linkedin.com/in/candelavillaverde/"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="hover:text-kuromi-neon-purple transition-colors"
+                                className="hover:text-metal-white transition-colors"
                             >
                                 LinkedIn
                             </a>
                         </div>
                     </motion.header>
+
+                    {/* Services / Qué hago Section */}
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 mb-12">
+                        <div className="bento-card border border-metal-white/10 hover:border-metal-red/40 bg-metal-black mt-2 shadow-lg transition-all duration-300">
+                            <h3 className="text-lg font-orbitron font-bold text-metal-white tracking-widest uppercase mb-2">PERCEPTION</h3>
+                            <p className="text-sm text-metal-white/70 font-mono mb-3">Interfaces precisas y de alto impacto visual. Forjadas con React, Next.js y TailwindCSS para dominar la presencia digital.</p>
+                            <p className="text-xs text-metal-red font-bold font-mono tracking-widest uppercase">→ Inmersivo</p>
+                        </div>
+                        <div className="bento-card border border-metal-white/10 hover:border-metal-red/40 bg-metal-black mt-2 shadow-lg transition-all duration-300">
+                            <h3 className="text-lg font-orbitron font-bold text-metal-white tracking-widest uppercase mb-2">CORE SYSTEMS</h3>
+                            <p className="text-sm text-metal-white/70 font-mono mb-3">Arquitecturas sólidas e implacables. CRMs remotos, paneles integrales y APIs de alta seguridad (Node.js/Supabase).</p>
+                            <p className="text-xs text-metal-red font-bold font-mono tracking-widest uppercase">→ Inquebrantable</p>
+                        </div>
+                        <div className="bento-card border border-metal-white/10 hover:border-metal-red/40 bg-metal-black mt-2 shadow-lg transition-all duration-300">
+                            <h3 className="text-lg font-orbitron font-bold text-metal-white tracking-widest uppercase mb-2">AUTOMATION</h3>
+                            <p className="text-sm text-metal-white/70 font-mono mb-3">Integración de ecosistemas en el vacío. Triggers en n8n y flujos LLM para escalar datos masivos sin pérdida operativa.</p>
+                            <p className="text-xs text-metal-red font-bold font-mono tracking-widest uppercase">→ Cero Fricción</p>
+                        </div>
+                    </div>
+                
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ delay: 0.3 }}
+                        className="mb-8 text-center"
+                    >
+                        <span className="inline-block px-4 py-2 bg-metal-black/50 border border-metal-white/30 rounded-full text-xs font-mono text-metal-white/90">
+                            <span className="w-2 h-2 inline-block bg-green-500 rounded-full mr-2 animate-pulse"></span>
+                            Disponible 100% remoto — contratos full-time / part-time
+                        </span>
+                    </motion.div>
 
                     {/* Bento Grid */}
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 auto-rows-[minmax(280px,auto)] mb-12">

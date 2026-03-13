@@ -11,12 +11,12 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
-        kuromi: {
-          black: '#0D0D0D',         // Fondo profundo
-          purple: '#240046',        // Sombras
-          'neon-purple': '#9d4edd', // Acento principal
-          pink: '#ff006e',          // Detalles y botones
-          white: '#f8f9fa',         // Texto
+        metal: {
+          black: '#050505',         // Very deep black
+          gray: '#121212',          // Dark gray for cards
+          red: '#880808',           // Blood red / Crimson accent
+          white: '#EAEAEA',         // Off-white for text
+          muted: '#666666',         // Muted gray for inactive text
         },
       },
       fontFamily: {
@@ -38,10 +38,10 @@ export default {
       keyframes: {
         glow: {
           '0%': {
-            boxShadow: '0 0 5px #ff006e, 0 0 10px #ff006e, 0 0 15px #ff006e',
+            boxShadow: '0 0 5px #880808, 0 0 10px #880808',
           },
           '100%': {
-            boxShadow: '0 0 10px #ff006e, 0 0 20px #ff006e, 0 0 30px #ff006e, 0 0 40px #9d4edd',
+            boxShadow: '0 0 10px #880808, 0 0 15px #880808',
           },
         },
         float: {

@@ -8,10 +8,10 @@ export default function PotionsBlock() {
     return (
         <div className="bento-card h-full cursor-skull flex flex-col">
             <div className="mb-4">
-                <h2 className="text-xl md:text-2xl font-orbitron font-bold text-kuromi-white mb-2">
+                <h2 className="text-xl md:text-2xl font-orbitron font-bold text-metal-white mb-2">
                     Tech Stack
                 </h2>
-                <p className="text-kuromi-white/60 text-xs font-mono">
+                <p className="text-metal-white/60 text-xs font-mono">
                     Core Technologies
                 </p>
             </div>
@@ -35,7 +35,7 @@ export default function PotionsBlock() {
                         }}
                         className="group relative"
                     >
-                        <div className="w-full aspect-square bg-kuromi-purple/20 rounded-xl p-3 border border-kuromi-neon-purple/20 hover:border-kuromi-pink/50 hover:bg-kuromi-purple/30 transition-all duration-300 flex items-center justify-center group/icon">
+                        <div className="w-full aspect-square bg-metal-gray/20 rounded-xl p-3 border border-metal-white/20 hover:border-metal-red/50 hover:bg-metal-gray/30 transition-all duration-300 flex items-center justify-center group/icon">
                             <Image
                                 src={logo.src}
                                 alt={logo.alt}
@@ -48,7 +48,7 @@ export default function PotionsBlock() {
 
                         {/* Tooltip */}
                         <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none z-10">
-                            <div className="bg-kuromi-black/95 border border-kuromi-pink/40 px-2 py-1 rounded text-[11px] text-kuromi-pink whitespace-nowrap font-mono shadow-[0_0_15px_rgba(255,113,206,0.3)]">
+                            <div className="bg-metal-black/95 border border-metal-red/40 px-2 py-1 rounded text-[11px] text-metal-red whitespace-nowrap font-mono shadow-[0_0_15px_rgba(255,113,206,0.3)]">
                                 {logo.name}
                             </div>
                         </div>

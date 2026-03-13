@@ -4,15 +4,15 @@ import Link from "next/link";
 
 const Footer = () => {
     return (
-        <footer className="w-full bg-kuromi-purple/30 backdrop-blur-md border-t border-kuromi-neon-purple/20 text-kuromi-white p-6 rounded-2xl">
+        <footer className="w-full bg-metal-gray/30 backdrop-blur-md border-t border-metal-white/20 text-metal-white p-6 rounded-2xl">
             <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
                 {/* Branding */}
                 <div className="text-center md:text-left">
-                    <h3 className="text-lg font-orbitron font-bold text-kuromi-white mb-1">
+                    <h3 className="text-lg font-orbitron font-bold text-metal-white mb-1">
                         Candela Villaverde
                     </h3>
-                    <p className="text-xs text-kuromi-white/50 font-mono">
-                        Full Stack Developer • Frontend Specialist
+                    <p className="text-xs text-metal-white/50 font-mono">
+                        Fullstack Developer • Automatización & AI Workflows
                     </p>
                 </div>
 
@@ -64,7 +64,7 @@ const Footer = () => {
                 </div>
 
                 {/* Copyright */}
-                <div className="text-center md:text-right text-xs text-kuromi-white/40 font-mono">
+                <div className="text-center md:text-right text-xs text-metal-white/40 font-mono">
                     <p>© 2025 All rights reserved</p>
                 </div>
             </div>

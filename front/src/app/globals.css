@@ -11,60 +11,59 @@
     background: transparent;
 }
 .custom-scrollbar::-webkit-scrollbar-thumb {
-    background: rgba(144, 103, 198, 0.2);
+    background: rgba(136, 8, 8, 0.4); /* Metal red */
     border-radius: 10px;
 }
 .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-    background: rgba(255, 113, 206, 0.4);
+    background: rgba(136, 8, 8, 0.8);
 }
 
 :root {
-  --background: #0D0D0D;
-  --foreground: #f8f9fa;
-  --kuromi-black: #0D0D0D;
-  --kuromi-purple: #240046;
-  --kuromi-neon-purple: #9d4edd;
-  --kuromi-pink: #ff006e;
-  --kuromi-white: #f8f9fa;
+  --background: #050505;
+  --foreground: #EAEAEA;
+  --metal-black: #050505;
+  --metal-gray: #121212;
+  --metal-red: #880808;
+  --metal-white: #EAEAEA;
+  --metal-muted: #666666;
 }
 
 @layer base {
   body {
-    @apply bg-kuromi-black text-kuromi-white;
+    @apply bg-metal-black text-metal-white;
     font-family: var(--font-geist-sans), 'Orbitron', sans-serif;
-    cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath fill='%23ff006e' d='M12 2L2 22h20L12 2z'/%3E%3C/svg%3E"), auto;
   }
 
   * {
-    @apply selection:bg-kuromi-pink selection:text-kuromi-black;
+    @apply selection:bg-metal-red selection:text-metal-white;
   }
 }
 
 @layer components {
   /* Neon glow text utility */
   .text-neon {
-    text-shadow: 0 0 10px currentColor, 0 0 20px currentColor, 0 0 30px currentColor;
+    text-shadow: 0 0 10px currentColor, 0 0 20px currentColor;
   }
 
-  .text-neon-pink {
-    color: var(--kuromi-pink);
-    text-shadow: 0 0 10px var(--kuromi-pink), 0 0 20px var(--kuromi-pink), 0 0 30px var(--kuromi-pink);
+  .text-metal-red-glow {
+    color: var(--metal-red);
+    text-shadow: 0 0 5px var(--metal-red), 0 0 10px var(--metal-red);
   }
 
-  .text-neon-purple {
-    color: var(--kuromi-neon-purple);
-    text-shadow: 0 0 10px var(--kuromi-neon-purple), 0 0 20px var(--kuromi-neon-purple), 0 0 30px var(--kuromi-neon-purple);
+  .text-metal-white-glow {
+    color: var(--metal-white);
+    text-shadow: 0 0 5px var(--metal-white), 0 0 10px var(--metal-white);
   }
 
   /* Border glow utility */
-  .border-glow-pink {
-    border: 2px solid var(--kuromi-pink);
-    box-shadow: 0 0 10px var(--kuromi-pink), 0 0 20px var(--kuromi-pink), inset 0 0 10px rgba(255, 0, 110, 0.2);
+  .border-glow-red {
+    border: 1px solid var(--metal-red);
+    box-shadow: 0 0 10px var(--metal-red), inset 0 0 5px rgba(136, 8, 8, 0.2);
   }
 
-  .border-glow-purple {
-    border: 2px solid var(--kuromi-neon-purple);
-    box-shadow: 0 0 10px var(--kuromi-neon-purple), 0 0 20px var(--kuromi-neon-purple), inset 0 0 10px rgba(157, 78, 221, 0.2);
+  .border-glow-white {
+    border: 1px solid var(--metal-white);
+    box-shadow: 0 0 5px var(--metal-white), inset 0 0 5px rgba(234, 234, 234, 0.1);
   }
 
   /* Scanline effect */
@@ -81,49 +80,44 @@
     bottom: 0;
     background: linear-gradient(
       rgba(18, 16, 16, 0) 50%,
-      rgba(0, 0, 0, 0.25) 50%
-    ),
-    linear-gradient(
-      90deg,
-      rgba(255, 0, 0, 0.06),
-      rgba(0, 255, 0, 0.02),
-      rgba(0, 0, 255, 0.06)
+      rgba(0, 0, 0, 0.4) 50%
     );
-    background-size: 100% 2px, 3px 100%;
+    background-size: 100% 4px;
     pointer-events: none;
     z-index: 50;
-    opacity: 0.15;
+    opacity: 0.1;
   }
 
   /* Bento card base style */
   .bento-card {
-    background: linear-gradient(to bottom right, rgba(36, 0, 70, 0.4), rgba(13, 13, 13, 0.6));
-    backdrop-filter: blur(4px);
-    border-radius: 1.5rem;
-    border: 2px solid rgba(157, 78, 221, 0.3);
+    background: var(--metal-gray);
+    backdrop-filter: blur(8px);
+    border-radius: 0.5rem; /* Sharper edges */
+    border: 1px solid rgba(234, 234, 234, 0.1);
     padding: 1.5rem;
-    transition: all 300ms;
+    transition: all 400ms ease;
   }
 
   .bento-card:hover {
-    border-color: rgba(255, 0, 110, 0.6);
-    transform: scale(1.02);
-    box-shadow: 0 0 20px rgba(255, 0, 110, 0.3), 0 0 40px rgba(157, 78, 221, 0.2);
+    border-color: rgba(136, 8, 8, 0.5); /* Hover border metal red */
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8), 0 0 15px rgba(136, 8, 8, 0.1);
   }
 }
 
 @layer utilities {
-  /* Custom cursor for interactive elements */
+  /* Cursor skull override - remove custom skull for metalcore vibe */
   .cursor-skull {
-    cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24'%3E%3Cpath fill='%23ff006e' d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z'/%3E%3C/svg%3E"), pointer;
+    cursor: default;
   }
 
   /* Gradient backgrounds */
   .bg-cyber-gradient {
-    background: linear-gradient(135deg, #240046 0%, #0D0D0D 50%, #240046 100%);
+    /* Now completely dark with subtle noise if possible, or very dark grey gradient */
+    background: linear-gradient(180deg, #050505 0%, #0a0a0a 100%);
   }
 
   .bg-neon-gradient {
-    background: linear-gradient(135deg, #9d4edd 0%, #ff006e 100%);
+    background: linear-gradient(135deg, #880808 0%, #300 100%);
   }
 }

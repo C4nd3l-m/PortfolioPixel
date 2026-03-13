@@ -13,8 +13,24 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Candela Villaverde | Full Stack Developer",
-  description: "Cyber-Goth Pastel Portfolio - Full Stack Dev by day, Chaos by night",
+  title: "Candela Villaverde — Fullstack Developer | Automation & AI Workflows (Remote)",
+  description: "Fullstack Developer especializada en automatización de procesos e integraciones (n8n, Node.js, Next.js). Disponibilidad 100% remota para roles full-time o part-time.",
+  keywords: "automation developer, n8n developer, workflow automation, integration developer, Next.js developer, remote developer, AI workflows",
+  openGraph: {
+    title: "Candela Villaverde — Fullstack Developer | Automation & AI Workflows",
+    description: "Fullstack Developer especializada en automatización de procesos e integraciones.",
+    url: "https://candelavillaverde.com",
+    siteName: "Candela Villaverde Portfolio",
+    images: [
+      {
+        url: "/profile.jpg",
+        width: 800,
+        height: 600,
+      },
+    ],
+    locale: "es_AR",
+    type: "website",
+  },
 };
 
 export default function RootLayout({

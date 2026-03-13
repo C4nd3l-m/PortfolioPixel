@@ -12,10 +12,10 @@ export default function VaultBlock() {
     return (
         <div className="bento-card h-full cursor-skull">
             <div className="mb-6">
-                <h2 className="text-2xl md:text-3xl font-orbitron font-bold text-kuromi-white mb-2">
+                <h2 className="text-2xl md:text-3xl font-orbitron font-bold text-metal-white mb-2">
                     Featured Projects
                 </h2>
-                <p className="text-kuromi-white/60 text-sm font-mono">
+                <p className="text-metal-white/60 text-sm font-mono">
                     Recent work and contributions
                 </p>
             </div>
@@ -38,10 +38,10 @@ export default function VaultBlock() {
                                     y: -4,
                                     transition: { type: "spring", stiffness: 400, damping: 15 },
                                 }}
-                                className={`bg-kuromi-purple/20 rounded-xl border border-kuromi-neon-purple/20 ${project.isConfidential ? '' : 'hover:border-kuromi-pink/50'} overflow-hidden transition-all duration-300 h-full`}
+                                className={`bg-metal-gray/20 rounded-xl border border-metal-white/20 ${project.isConfidential ? '' : 'hover:border-metal-red/50'} overflow-hidden transition-all duration-300 h-full`}
                             >
                                 {/* Project Image */}
-                                <div className="relative w-full aspect-video bg-kuromi-black/60 overflow-hidden">
+                                <div className="relative w-full aspect-video bg-metal-black/60 overflow-hidden">
                                     <Image
                                         src={project.src}
                                         alt={project.alt}
@@ -49,20 +49,20 @@ export default function VaultBlock() {
                                         className={`object-cover ${project.isConfidential ? '' : 'group-hover:scale-105'} transition-transform duration-500`}
                                     />
                                     {/* Overlay gradient */}
-                                    <div className={`absolute inset-0 bg-gradient-to-t from-kuromi-black/80 via-transparent to-transparent opacity-0 ${project.isConfidential ? '' : 'group-hover:opacity-100'} transition-opacity duration-300`} />
+                                    <div className={`absolute inset-0 bg-gradient-to-t from-metal-black/80 via-transparent to-transparent opacity-0 ${project.isConfidential ? '' : 'group-hover:opacity-100'} transition-opacity duration-300`} />
                                 </div>
 
                                 {/* Project Info */}
                                 <div className="p-4">
-                                    <h3 className={`text-kuromi-white font-orbitron font-bold text-base mb-2 ${project.isConfidential ? '' : 'group-hover:text-kuromi-pink'} transition-colors`}>
+                                    <h3 className={`text-metal-white font-orbitron font-bold text-base mb-2 ${project.isConfidential ? '' : 'group-hover:text-metal-red'} transition-colors`}>
                                         {project.alt}
                                     </h3>
-                                    <p className="text-kuromi-white/60 text-xs font-mono line-clamp-2 leading-relaxed">
+                                    <p className="text-metal-white/60 text-xs font-mono line-clamp-2 leading-relaxed">
                                         {project.description}
                                     </p>
 
                                     {/* View project indicator */}
-                                    <div className={`mt-3 flex items-center gap-2 ${project.isConfidential ? 'text-kuromi-white/40' : 'text-kuromi-neon-purple group-hover:text-kuromi-pink'} transition-colors`}>
+                                    <div className={`mt-3 flex items-center gap-2 ${project.isConfidential ? 'text-metal-white/40' : 'text-metal-white group-hover:text-metal-red'} transition-colors`}>
                                         {project.isConfidential ? (
                                             <span className="text-xs font-mono opacity-60">Confidential Project</span>
                                         ) : (
