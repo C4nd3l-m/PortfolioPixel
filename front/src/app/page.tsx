@@ -49,7 +49,7 @@ export default function Home() {
                             <a href="/projects" className="px-6 py-3 bg-metal-white hover:bg-metal-red text-metal-black hover:text-metal-white font-mono font-bold rounded shadow-[0_0_15px_rgba(136,8,8,0.2)] hover:shadow-[0_0_20px_rgba(136,8,8,0.5)] transition-all uppercase tracking-wider text-sm">
                                 Ver Case Studies
                             </a>
-                            <a href="/cv.pdf" target="_blank" rel="noopener noreferrer" className="px-6 py-3 bg-transparent hover:bg-metal-red/10 text-metal-white font-mono rounded transition-colors border border-metal-white/20 hover:border-metal-red uppercase tracking-wider text-sm">
+                            <a href="/Candela_Villaverde_CV.pdf" target="_blank" rel="noopener noreferrer" className="px-6 py-3 bg-transparent hover:bg-metal-red/10 text-metal-white font-mono rounded transition-colors border border-metal-white/20 hover:border-metal-red uppercase tracking-wider text-sm">
                                 Descargar CV
                             </a>
                             {/* Mobile Contrátame CTA */}
